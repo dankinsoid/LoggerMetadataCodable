@@ -1,0 +1,23 @@
+{
+  "pins" : [
+    {
+      "identity" : "simplecoders",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/dankinsoid/SimpleCoders.git",
+      "state" : {
+        "revision" : "1527a7ab9a00a7a8a5a031c3102efc9cfccb49d4",
+        "version" : "1.4.0"
+      }
+    },
+    {
+      "identity" : "swift-log",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/apple/swift-log.git",
+      "state" : {
+        "revision" : "6fe203dc33195667ce1759bf0182975e4653ba1c",
+        "version" : "1.4.4"
+      }
+    }
+  ],
+  "version" : 2
+}

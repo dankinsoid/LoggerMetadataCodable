@@ -4,19 +4,20 @@
 import PackageDescription
 
 let package = Package(
-    name: "${NAME}",
-    platforms: [
-        .iOS(.v13),
-    ],
+    name: "LoggerMetadataCodable",
     products: [
-        .library(name: "${NAME}", targets: ["${NAME}"]),
+        .library(name: "LoggerMetadataCodable", targets: ["LoggerMetadataCodable"]),
     ],
     dependencies: [
+        .package(url: "https://github.com/apple/swift-log.git", from: "1.4.1"),
+        .package(url: "https://github.com/dankinsoid/SimpleCoders.git", from: "1.4.0")
     ],
     targets: [
         .target(
-            name: "${NAME}",
+            name: "LoggerMetadataCodable",
             dependencies: [
+                .product(name: "Logging", package: "swift-log"),
+                "SimpleCoders"
             ]
         )
     ]
