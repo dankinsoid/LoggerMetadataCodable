@@ -43,6 +43,13 @@ public struct LoggerMetadataEncoder: CodableEncoder {
     }
 }
 
+public extension Logger.Metadata {
+    
+    static func encode<T: Encodable>(_ value: T) throws -> Logger.Metadata {
+        try LoggerMetadataEncoder().encode(value)
+    }
+}
+
 private extension LoggerMetadataEncoder {
     
     struct Boxer: EncodingBoxer {

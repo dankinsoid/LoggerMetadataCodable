@@ -30,6 +30,13 @@ public struct LoggerMetadataDecoder: CodableDecoder {
     }
 }
 
+public extension Logger.Metadata {
+    
+    func decode<T: Decodable>(_ type: T.Type) throws -> T {
+        try LoggerMetadataDecoder().decode(type, from: self)
+    }
+}
+
 private extension LoggerMetadataDecoder {
     
     struct Unboxer: DecodingUnboxer {
